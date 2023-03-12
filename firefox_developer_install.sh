@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # make sure curl and tar are installed
 sudo apt install curl
 sudo apt install tar
