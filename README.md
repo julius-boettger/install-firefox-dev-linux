@@ -8,6 +8,5 @@ curl "https://raw.githubusercontent.com/julius-boettger/install-firefox-dev-linu
 
 # ToDo
 - make script safer by checking for present installations etc
-- pass language locale for firefox as argument to script
 - write an actual README.md
 

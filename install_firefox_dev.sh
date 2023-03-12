@@ -1,15 +1,29 @@
 #!/bin/bash
+
 # make sure curl and tar are installed
 sudo apt install curl
 sudo apt install tar
+
+# set $LOCALE to first argument
+LOCALE="$1"
+
+# set $LOCALE to default value if there are no arguments
+if [ $# -eq 0 ]; then
+    LOCALE="en-US"
+fi
+
 # download firefox archive to /opt/
-sudo curl --location "https://download.mozilla.org/?product=firefox-devedition-latest-ssl&os=linux64&lang=en-US" --output /opt/firefox.tar.bz2
+sudo curl --location "https://download.mozilla.org/?product=firefox-devedition-latest-ssl&os=linux64&lang=${LOCALE}" --output /opt/firefox.tar.bz2
+
 # expand the archive in /opt/
 sudo tar -xjf /opt/firefox.tar.bz2 -C /opt/
+
 # delete the archive
 sudo rm -rf /opt/firefox.tar.bz2
+
 # make current user owner of firefox/
 sudo chown -R $USER /opt/firefox
+
 # write shortcut file
 cat > ~/.local/share/applications/firefox_dev.desktop << EOF
 [Desktop Entry]
@@ -25,6 +39,7 @@ StartupWMClass=firefox-aurora
 
 EOF
 # end shortcut file
+
 # mark shortcut file as trusted and make it executable
 chmod +x ~/.local/share/applications/firefox_dev.desktop
 
