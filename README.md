@@ -1,5 +1,5 @@
 # Automatically install Firefox Developer Edition
-> on your Debian-based Linux distribution
+> on your Debian-based 64bit Linux distribution
 
 # Usage
 ```bash
