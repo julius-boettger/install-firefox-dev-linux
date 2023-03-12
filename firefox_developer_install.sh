@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # make sure curl and tar are installed
 sudo apt install curl
 sudo apt install tar
@@ -11,8 +10,21 @@ sudo tar -xjf /opt/firefox.tar.bz2 -C /opt/
 sudo rm -rf /opt/firefox.tar.bz2
 # make current user owner of firefox/
 sudo chown -R $USER /opt/firefox
-# copy shortcut file firefox_dev.desktop to appropriate location
-cp firefox_dev.desktop ~/.local/share/applications/
-# mark shortcut as trusted and make it executable
+# write shortcut file
+cat > ~/.local/share/applications/firefox_dev.desktop << EOF
+[Desktop Entry]
+Name=Firefox Developer Edition
+GenericName=Firefox Developer Edition
+Exec=/opt/firefox/firefox %u
+Terminal=false
+Icon=/opt/firefox/browser/chrome/icons/default/default128.png
+Type=Application
+Categories=Application;Network;X-Developer;
+Comment=Mozilla Firefox Developer Edition Web Browser
+StartupWMClass=firefox-aurora
+
+EOF
+# end shortcut file
+# mark shortcut file as trusted and make it executable
 chmod +x ~/.local/share/applications/firefox_dev.desktop
 
