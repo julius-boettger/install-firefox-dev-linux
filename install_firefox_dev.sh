@@ -9,9 +9,9 @@ GREEN="\e[32m"
 
 # make sure curl and tar are installed
 printf "installing curl and tar...\r\n\n"
-sudo apt install curl
+sudo apt install -y curl
 printf "\r\n"
-sudo apt install tar
+sudo apt install -y tar
 printf "\n${GREEN}curl and tar installed.${NC}\r\n\n"
 
 printf "downloading firefox developer edition. "
