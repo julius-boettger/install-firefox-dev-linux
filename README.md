@@ -3,7 +3,7 @@
 
 # Usage
 ```bash
-curl "https://raw.githubusercontent.com/julius-boettger/install-firefox-dev-linux/master/install_firefox_dev.sh" | bash -s "en_US"
+curl "https://raw.githubusercontent.com/julius-boettger/install-firefox-dev-linux/master/install_firefox_dev.sh" | bash -s "en-US"
 ```
 
 # ToDo
