@@ -9,4 +9,6 @@ curl "https://raw.githubusercontent.com/julius-boettger/install-firefox-dev-linu
 # ToDo
 - make script safer by checking for present installations etc
 - write an actual README.md
-- check if -y option does anything, test behaviour when dependencies are not yet installed (use apt-get instead?)
+- remove `apt` to make script package manager independent
+  - use `git`?
+- uninstall script?
