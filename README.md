@@ -11,4 +11,5 @@ curl "https://raw.githubusercontent.com/julius-boettger/install-firefox-dev-linu
 - write an actual README.md
 - remove `apt` to make script package manager independent
   - use `git`?
+- try `wget` instead of `curl`
 - uninstall script?
