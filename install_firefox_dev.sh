@@ -4,15 +4,6 @@
 NC="\e[0m" # no color
 RED="\e[31m"
 GREEN="\e[32m"
-#printf "${RED}red${NC}\r\n"
-#printf "${GREEN}green${NC}\r\n"
-
-# make sure curl and tar are installed
-printf "installing curl and tar...\r\n\n"
-sudo apt install -y curl
-printf "\r\n"
-sudo apt install -y tar
-printf "\n${GREEN}curl and tar installed.${NC}\r\n\n"
 
 printf "downloading firefox developer edition. "
 
