@@ -1,15 +1,23 @@
 # Automatically install Firefox Developer Edition
-> on your Debian-based 64bit Linux distribution
 
-# Usage
+There is no official and automatic way to download, install and integrate Firefox Developer Edition on a Linux system. This is my try at it.
+
+## Prerequisites
+- `bash`, `tar` and `curl` have to be installed
+  - Fedora-based: `sudo dnf install tar curl`
+  - Debian-based: `sudo apt install tar curl`
+  - ...
+
+## Usage
 ```bash
 curl "https://raw.githubusercontent.com/julius-boettger/install-firefox-dev-linux/master/install_firefox_dev.sh" | bash -s "en-US"
 ```
+- `"en-US"` is the language in which Firefox will be installed, which has to be provided before starting the installation, as it cannot be changed later!
+  - you can change this to your preferred language like `"de-DE"`
 
-# ToDo
+## ToDo
 - make script safer by checking for present installations etc
-- write an actual README.md
-- remove `apt` to make script package manager independent
-  - use `git`?
+- improve README.md
 - try `wget` instead of `curl`
-- uninstall script?
+- remove `bash` dependency by executing with default shell?
+- also provide an uninstall script?
