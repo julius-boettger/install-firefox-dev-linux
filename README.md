@@ -1,5 +1,5 @@
 # Automatically install Firefox Developer Edition
-
+> Also called "Firefox Aurora"
 There is no official and automatic way to download, install and integrate Firefox Developer Edition on a Linux system. This is my try at it.
 
 ## Prerequisites
@@ -21,3 +21,5 @@ curl "https://raw.githubusercontent.com/julius-boettger/install-firefox-dev-linu
 - try `wget` instead of `curl`
 - remove `bash` dependency by executing with default shell?
 - also provide an uninstall script?
+- rename installation folder to `firefox-dev` or `firefox-aurora`
+- document how to make an alias to the binary
